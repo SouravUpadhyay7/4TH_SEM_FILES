@@ -1,0 +1,10 @@
+1. Prim’s Algorithm (Minimum Spanning Tree)
+Algorithm:
+
+Initialize an empty Minimum Spanning Tree (MST).
+Select any arbitrary node as the starting node and mark it as part of the MST.
+Repeat the following until all vertices are included in the MST:
+Select the minimum-weight edge that connects a vertex in the MST to a vertex outside the MST.
+Add this edge to the MST.
+Mark the newly included vertex as part of the MST.
+Continue until all vertices are included in the MST.

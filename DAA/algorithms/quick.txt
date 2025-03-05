@@ -1,0 +1,7 @@
+2. Quick Sort Algorithm
+Algorithm:
+
+Choose a pivot element from the array (usually the last element).
+Partition the array such that all elements smaller than the pivot are on the left and all larger elements are on the right.
+Recursively apply Quick Sort to the left and right subarrays.
+Combine the sorted subarrays to get the final sorted array.

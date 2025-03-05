@@ -1,0 +1,7 @@
+Merge Sort Algorithm
+Algorithm:
+
+Divide the array into two halves recursively until each subarray contains only one element.
+Merge the subarrays by comparing elements and sorting them.
+Continue merging until the entire array is sorted.
+The merging process ensures that the final array is sorted.
