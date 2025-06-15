@@ -43,3 +43,26 @@ int main() {
     return 0;
 }
 
+
+
+
+/*
+Algorithm: Quick Sort (Divide and Conquer)
+
+1. Choose a pivot element (commonly the last element in the array).
+
+2. Partitioning:
+   a. Initialize an index (i) to point to the position before the start of the array.
+   b. Traverse the array from 'low' to 'high - 1':
+      - If the current element is smaller than the pivot:
+        - Increment index i.
+        - Swap the current element with the element at index i.
+   c. After traversal, place the pivot in its correct sorted position by swapping it with the element at index i+1.
+   d. Return the index (i+1) as the partitioning index.
+
+3. Recursively apply Quick Sort to:
+   a. Left subarray (from 'low' to 'partition index - 1').
+   b. Right subarray (from 'partition index + 1' to 'high').
+
+4. The recursion continues until the base case (low >= high) is reached.
+*/

@@ -37,3 +37,28 @@ int main() {
     return 0;
 }
 
+/*
+Algorithm: 0/1 Knapsack using Dynamic Programming
+
+1. Create a 2D array `dp[n+1][W+1]` where:
+   - `n` is the number of items.
+   - `W` is the maximum capacity of the knapsack.
+   - `dp[i][w]` represents the maximum value that can be obtained with the first `i` items and a knapsack capacity `w`.
+
+2. Initialize the first row and first column of the table with 0.
+   - This represents the case when either there are no items or knapsack capacity is 0.
+
+3. Fill the table in a bottom-up manner:
+   For each item `i` from 1 to n:
+      For each capacity `w` from 1 to W:
+         a. If the weight of the current item `wt[i-1]` is less than or equal to `w`:
+            - Include the item: `val[i-1] + dp[i-1][w - wt[i-1]]`
+            - Exclude the item: `dp[i-1][w]`
+            - Take the maximum of the above two.
+         b. If `wt[i-1] > w`:
+            - Cannot include the item, so `dp[i][w] = dp[i-1][w]`
+
+4. After the table is completely filled, the result will be in `dp[n][W]`.
+
+5. Return `dp[n][W]` as the maximum value that can be stored in the knapsack.
+*/

@@ -50,3 +50,23 @@ int main() {
     return 0;
 }
 
+/*
+Algorithm: Find Minimum and Maximum using Divide and Conquer
+
+1. If the array has only one element:
+   - Both minimum and maximum are that element.
+
+2. If the array has two elements:
+   - Compare both elements.
+   - The smaller is the minimum, and the larger is the maximum.
+
+3. If the array has more than two elements:
+   a. Divide the array into two halves.
+   b. Recursively find the minimum and maximum in the left half.
+   c. Recursively find the minimum and maximum in the right half.
+   d. Compare the results:
+      - The overall minimum is the smaller of the two minimums.
+      - The overall maximum is the larger of the two maximums.
+
+4. Return the pair (minimum, maximum) after merging the results from both halves.
+*/

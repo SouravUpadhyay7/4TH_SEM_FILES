@@ -52,3 +52,27 @@ int main() {
     return 0;
 }
 
+
+
+/*
+Algorithm: Breadth-First Search (BFS) using Adjacency Matrix and Queue
+
+1. Initialize a visited array of size equal to the number of vertices, and set all entries to 0.
+
+2. Create a queue to hold nodes to be explored.
+
+3. Start BFS from the given start node:
+   a. Mark the start node as visited.
+   b. Enqueue the start node.
+
+4. While the queue is not empty:
+   a. Dequeue a node from the front of the queue and print it (process it).
+   b. For all vertices adjacent to this node:
+      - If the vertex is connected (graph[node][i] == 1) and not yet visited:
+         - Mark it as visited.
+         - Enqueue it.
+
+5. Continue the process until the queue becomes empty.
+
+6. The order of printed nodes is the BFS traversal order.
+*/

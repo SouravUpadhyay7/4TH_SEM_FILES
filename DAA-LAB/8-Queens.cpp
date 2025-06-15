@@ -82,3 +82,37 @@ int main() {
     return 0;
 }
 
+
+/*
+Algorithm for Solving N-Queens Problem using Backtracking
+
+1. Start
+
+2. Define an N x N chessboard (2D array) and initialize all cells to 0.
+
+3. Define a function isSafe(board, row, col) to check if a queen can be placed at (row, col):
+   a. Check all rows above in the current column.
+   b. Check the upper left diagonal.
+   c. Check the upper right diagonal.
+   d. If no queen is attacking, return true.
+
+4. Define a recursive function solveNQueens(board, row):
+   a. If row >= N, then all queens are placed:
+      - Print the board configuration.
+      - Return true.
+   b. For each column in the current row:
+      i.   If placing a queen at (row, col) is safe:
+           - Place the queen (board[row][col] = 1).
+           - Recur to place the rest of the queens in the next row.
+           - If recursive call returns true, return true.
+           - Else, backtrack (board[row][col] = 0).
+   c. If no valid column is found in this row, return false.
+
+5. In main():
+   a. Initialize the board with all 0s.
+   b. Call solveNQueens(board, 0) to start placing from the first row.
+   c. If no solution is found, print "No solution exists!".
+
+6. End
+*/
+

@@ -58,3 +58,28 @@ int main() {
    return 0;
 }
 
+
+
+
+/*
+Algorithm: Travelling Salesman Problem (TSP) using Recursion and Backtracking
+
+1. Start from a source city (usually city 0) and mark it as visited.
+
+2. Use a recursive function to explore all possible paths:
+   a. Base Case: If all cities have been visited (count == V) and there is a return edge to the starting city:
+      - Calculate the total tour cost (current cost + cost to return to start).
+      - Update the minimum cost if this tour cost is smaller.
+
+   b. Recursive Case:
+      - For every city not yet visited and directly connected to the current city:
+         - Mark the city as visited.
+         - Recur with updated parameters: new position, increased count, and updated cost.
+         - Backtrack: unmark the city to explore other paths.
+
+3. Repeat for all valid paths and return the minimum tour cost found.
+
+4. In `main`, initialize visited array and call the recursive function starting from city 0.
+
+5. Output the minimum cost of the complete tour.
+*/

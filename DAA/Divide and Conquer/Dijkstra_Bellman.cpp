@@ -57,3 +57,35 @@ int main() {
     return 0;
 }
 
+
+/*
+Algorithm: Dijkstra's Algorithm (for Single Source Shortest Path)
+
+1. Start
+
+2. Define a function `minDistance(dist[], visited[])`:
+   a. Initialize `min` to INFINITY.
+   b. Traverse all vertices `v`:
+      i.   If `visited[v] == 0` and `dist[v]` is less than or equal to `min`:
+           → update `min = dist[v]` and `min_index = v`
+   c. Return `min_index` (vertex with minimum distance and not visited yet).
+
+3. Define the function `dijkstra(graph[V][V], src)`:
+   a. Create array `dist[]` to store shortest distances and initialize all values to INFINITY.
+   b. Create array `visited[]` to mark visited vertices and initialize all values to 0.
+   c. Set `dist[src] = 0` since the distance from source to itself is 0.
+
+4. Repeat (V - 1) times:
+   a. Pick the minimum distance vertex `u` from the unvisited vertices using `minDistance()`.
+   b. Mark vertex `u` as visited.
+   c. For every vertex `v` adjacent to `u`:
+      i. If `v` is not visited,
+         and there is an edge from `u` to `v` (`graph[u][v] != 0`),
+         and total distance `dist[u] + graph[u][v] < dist[v]`:
+         → update `dist[v] = dist[u] + graph[u][v]`.
+
+5. After the loop, print all shortest distances from source to each vertex.
+
+6. End
+*/
+

@@ -55,3 +55,24 @@ int main() {
     return 0;
 }
 
+
+
+/*
+Algorithm: Merge Sort (Divide and Conquer)
+
+1. If the array has more than one element:
+   a. Divide the array into two halves:
+      - Find the middle point (mid = (left + right) / 2).
+   b. Recursively apply merge sort to the left half.
+   c. Recursively apply merge sort to the right half.
+   d. Merge the two sorted halves into a single sorted array.
+
+2. Merge Function:
+   a. Create two temporary arrays for left and right subarrays.
+   b. Copy data into these temporary arrays.
+   c. Compare elements from both arrays and copy the smaller one back to the original array.
+   d. Copy any remaining elements from the left or right temporary arrays.
+
+3. This continues recursively until the whole array is sorted.
+*/
+

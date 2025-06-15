@@ -51,3 +51,36 @@ int main() {
     return 0;
 }
 
+
+
+/*
+Algorithm for Graph Coloring using Backtracking
+
+1. Start
+
+2. Define a graph as an adjacency matrix of size N x N, where N is the number of vertices.
+
+3. Define an array 'colors' to store the color assigned to each vertex, initially set to 0 (uncolored).
+
+4. Define a function isSafe(v, c) to check whether color 'c' can be assigned to vertex 'v':
+   a. Traverse all vertices adjacent to vertex 'v'.
+   b. If any adjacent vertex has the same color 'c', return false.
+   c. Otherwise, return true.
+
+5. Define a recursive function solveGraphColoring(v, m):
+   a. If v == N (all vertices have been colored), print the color assignment and return true.
+   b. For each color from 1 to m:
+      i.   Check if assigning this color to vertex 'v' is safe using isSafe().
+      ii.  If safe, assign the color to vertex 'v'.
+      iii. Recur to assign colors to the remaining vertices (v + 1).
+      iv.  If recursion returns true, return true.
+      v.   Else, backtrack by resetting the color of vertex 'v' to 0.
+
+6. In main():
+   a. Set the number of colors 'm'.
+   b. Initialize all vertex colors to 0.
+   c. Call solveGraphColoring(0, m) to start coloring from the first vertex.
+   d. If no valid coloring exists, print "No solution exists!"
+
+7. End
+*/

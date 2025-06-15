@@ -88,3 +88,45 @@ int main() {
     return 0;
 }
 
+
+
+/*
+Algorithm: Kruskal’s Minimum Spanning Tree (MST)
+
+1. Initialize:
+   - Each vertex is its own parent for union-find (disjoint set).
+
+2. Sort all edges in ascending order based on their weight.
+
+3. Initialize count = 0 and totalWeight = 0.
+
+4. For each edge in sorted order:
+   a. If including the current edge (u, v) does not form a cycle:
+      - i.e., if find(u) != find(v):
+         i. Add edge (u, v) to the MST.
+         ii. Perform union of u and v (merge the sets).
+         iii. Increment count of edges added to MST.
+         iv. Add the weight of the edge to totalWeight.
+
+   b. Stop when count == V - 1 (MST complete with V-1 edges).
+
+5. Print all edges in the MST and the total weight.
+
+Supporting Functions:
+---------------------
+- `find(i)`:
+   → Uses simple path traversal to find the root of node `i`.
+
+- `unionSet(u, v)`:
+   → Finds roots of `u` and `v`, and merges them by updating parent of one root.
+
+Time Complexity:
+----------------
+- Sorting edges: O(E log E)
+- Union-Find operations: O(E * α(V)) with optimized union-find (not used here, simple linear find used)
+- Overall: O(E log E) if optimized
+
+Space Complexity:
+-----------------
+- O(V + E) for parent array and edge list
+*/

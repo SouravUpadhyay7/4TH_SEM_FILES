@@ -44,3 +44,30 @@ int main() {
     return 0;
 }
 
+/*
+Algorithm: Floyd-Warshall Algorithm (for All Pairs Shortest Path)
+
+1. Start
+
+2. Input: A weighted directed graph represented as an adjacency matrix `graph[V][V]`
+   - If there is no edge between vertex i and j, set `graph[i][j] = INF` (a large number like 99999).
+   - Distance from a vertex to itself is 0.
+
+3. Create a matrix `dist[V][V]` and initialize it as:
+   - dist[i][j] = graph[i][j] for all i and j.
+
+4. Use each vertex `k` as an intermediate vertex in the path:
+   For k = 0 to V-1:
+      For i = 0 to V-1:
+         For j = 0 to V-1:
+            If dist[i][k] + dist[k][j] < dist[i][j]:
+               → Update dist[i][j] = dist[i][k] + dist[k][j]
+
+5. After all iterations, the matrix `dist[i][j]` will contain the shortest distances between all pairs of vertices.
+
+6. Print the distance matrix:
+   - If dist[i][j] == INF → print "INF"
+   - Else print dist[i][j]
+
+7. End
+*/

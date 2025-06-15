@@ -84,3 +84,48 @@ int main() {
     return 0;
 }
 
+
+
+/*
+Algorithm for 15-Puzzle Game using Backtracking-Like Moves
+
+1. Start
+
+2. Define the size of the puzzle as a 4x4 grid (N = 4).
+
+3. Initialize a 2D array 'puzzle' with tile values from 1 to 15 and 0 as the blank tile.
+
+4. Define a function `printPuzzle()`:
+   a. Loop through all rows and columns.
+   b. Print each tile value; print '_' for the blank tile (value 0).
+
+5. Define a function `findBlank(puzzle, *x, *y)`:
+   a. Search the entire puzzle to find the coordinates of the blank tile (0).
+   b. Store the coordinates in variables pointed by x and y.
+
+6. Define a utility function `swap(*a, *b)` to swap values of two tiles.
+
+7. Define a function `moveTile(puzzle, move)`:
+   a. Find the blank tile position using `findBlank`.
+   b. Based on input move character ('w', 'a', 's', 'd'):
+      i.   'w': if blank not in first row, swap with tile above (move up).
+      ii.  's': if blank not in last row, swap with tile below (move down).
+      iii. 'a': if blank not in first column, swap with tile left (move left).
+      iv.  'd': if blank not in last column, swap with tile right (move right).
+
+8. Define a function `isSolved(puzzle)`:
+   a. Check whether all elements are in correct order:
+      i.  Tile at position (i,j) should be (i*N + j + 1) modulo (N*N).
+      ii. Last tile must be 0 (blank).
+   b. If all match, return true; else return false.
+
+9. In `main()`:
+   a. Display welcome message.
+   b. Loop until the puzzle is solved:
+      i.   Display the current puzzle using `printPuzzle()`.
+      ii.  Ask the user to input a move (w/a/s/d).
+      iii. Call `moveTile()` with user move.
+   c. Once solved, display congratulations and final puzzle state.
+
+10. End
+*/
